@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>はじめてのページ</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f1f5f9;
+      color: #1e293b;
+      font-family: system-ui, sans-serif;
+    }
+    main {
+      width: min(480px, calc(100% - 80px));
+      padding: 32px;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 12px 36px #1e293b14;
+      text-align: center;
+    }
+    h1 { font-size: 28px; }
+    p { line-height: 1.8; }
+    button {
+      padding: 12px 24px;
+      border: 0;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    button:focus-visible { outline: 3px solid #93c5fd; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>こんにちは！</h1>
+    <p>シンプルなHTMLページへようこそ。</p>
+    <button type="button" id="greeting">クリックしてみる</button>
+    <p id="message" role="status"></p>
+  </main>
+  <script>
+    document.getElementById('greeting').addEventListener('click', () => {
+      document.getElementById('message').textContent = 'クリックありがとうございます！';
+    });
+  </script>
+</body>
+</html>
